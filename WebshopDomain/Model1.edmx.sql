@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, 2012 and Azure
 -- --------------------------------------------------
--- Date Created: 05/30/2020 16:34:41
+-- Date Created: 06/06/2020 13:35:38
 -- Generated from EDMX file: D:\3.NET projecten\Webshop\WebshopDomain\Model1.edmx
 -- --------------------------------------------------
 
@@ -77,7 +77,7 @@ GO
 -- Creating table 'Order_ProductSet'
 CREATE TABLE [dbo].[Order_ProductSet] (
     [Id] int IDENTITY(1,1) NOT NULL,
-    [quantity] nvarchar(max)  NOT NULL,
+    [quantity] int  NOT NULL,
     [OrderOrder_Product_Order_Product_Id] int  NOT NULL,
     [Product_Id] int  NOT NULL
 );

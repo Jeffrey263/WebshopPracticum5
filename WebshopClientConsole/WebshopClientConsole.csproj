@@ -60,7 +60,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="ClientTestConsole.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +70,18 @@
     </None>
     <None Include="Connected Services\webshopService\item1.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\webshopService\item2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Connected Services\webshopService\WebshopClientConsole.webshopService.Order.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\webshopService\WebshopClientConsole.webshopService.Product.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\webshopService\WebshopClientConsole.webshopService.User.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Connected Services\webshopService\webshopService.wsdl" />
     <None Include="packages.config" />

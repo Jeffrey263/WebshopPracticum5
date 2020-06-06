@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebshopDomain", "WebshopDom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AddProductConsole", "AddProductConsole\AddProductConsole.csproj", "{528BECC1-30B6-424F-924A-E4E926C10BE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "webshopFormsApp", "webshopFormsApp\webshopFormsApp.csproj", "{08F8B00F-A60F-4D56-8E13-0E1A15406AB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{528BECC1-30B6-424F-924A-E4E926C10BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{528BECC1-30B6-424F-924A-E4E926C10BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{528BECC1-30B6-424F-924A-E4E926C10BE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08F8B00F-A60F-4D56-8E13-0E1A15406AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08F8B00F-A60F-4D56-8E13-0E1A15406AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08F8B00F-A60F-4D56-8E13-0E1A15406AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08F8B00F-A60F-4D56-8E13-0E1A15406AB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

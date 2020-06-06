@@ -14,18 +14,9 @@ namespace WebshopDomain
     
     public partial class User
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public User()
-        {
-            this.Orders = new HashSet<Order>();
-        }
-    
         public int Id { get; set; }
         public string name { get; set; }
         public string password { get; set; }
         public double balance { get; set; }
-    
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
     }
 }

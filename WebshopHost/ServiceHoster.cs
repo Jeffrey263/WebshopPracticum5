@@ -8,7 +8,7 @@ using Webshop;
 
 namespace WebshopHost
 {
-    class Program
+    class ServiceHoster
     {
         static void Main(string[] args)
         {

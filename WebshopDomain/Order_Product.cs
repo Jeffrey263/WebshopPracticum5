@@ -15,7 +15,7 @@ namespace WebshopDomain
     public partial class Order_Product
     {
         public int Id { get; set; }
-        public string quantity { get; set; }
+        public int quantity { get; set; }
     
         public virtual Product Product { get; set; }
     }

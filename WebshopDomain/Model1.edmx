@@ -54,7 +54,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="quantity" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="quantity" Type="int" Nullable="false" />
     <Property Name="OrderOrder_Product_Order_Product_Id" Type="int" Nullable="false" />
     <Property Name="Product_Id" Type="int" Nullable="false" />
   </EntityType>
@@ -124,7 +124,6 @@
           <Property Name="name" Type="String" Nullable="false" />
           <Property Name="password" Type="String" Nullable="false" />
           <Property Name="balance" Type="Double" Nullable="false" />
-          <NavigationProperty Name="Orders" Relationship="Model1.UserOrder" FromRole="User" ToRole="Order" />
         </EntityType>
         <EntityType Name="Product">
           <Key>
@@ -153,7 +152,7 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="quantity" Type="String" Nullable="false" />
+          <Property Name="quantity" Type="Int32" Nullable="false" />
           <NavigationProperty Name="Product" Relationship="Model1.Order_ProductProduct" FromRole="Order_Product" ToRole="Product" />
         </EntityType>
         <Association Name="OrderOrder_Product">
@@ -161,7 +160,7 @@
           <End Type="Model1.Order_Product" Role="Order_Product" Multiplicity="*" />
         </Association>
         <Association Name="Order_ProductProduct">
-          <End Type="Model1.Order_Product" Role="Order_Product" Multiplicity="0..1" />
+          <End Type="Model1.Order_Product" Role="Order_Product" Multiplicity="*" />
           <End Type="Model1.Product" Role="Product" Multiplicity="1" />
         </Association>
       </Schema>
