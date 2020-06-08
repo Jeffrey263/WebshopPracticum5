@@ -422,10 +422,10 @@ namespace WebshopClientConsole.webshopService {
         System.Threading.Tasks.Task<bool> CheckUserAuthenticationAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerID", ReplyAction="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerIDResponse")]
-        WebshopClientConsole.webshopService.Order[] GetAllOrdersByCustomerID(int cId, string username, string password);
+        int[] GetAllOrdersByCustomerID(int cId, string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerID", ReplyAction="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerIDResponse")]
-        System.Threading.Tasks.Task<WebshopClientConsole.webshopService.Order[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password);
+        System.Threading.Tasks.Task<int[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetOrderByID", ReplyAction="http://tempuri.org/IwebshopService/GetOrderByIDResponse")]
         WebshopClientConsole.webshopService.Order GetOrderByID(int id, string username, string password);
@@ -531,11 +531,11 @@ namespace WebshopClientConsole.webshopService {
             return base.Channel.CheckUserAuthenticationAsync(username, password);
         }
         
-        public WebshopClientConsole.webshopService.Order[] GetAllOrdersByCustomerID(int cId, string username, string password) {
+        public int[] GetAllOrdersByCustomerID(int cId, string username, string password) {
             return base.Channel.GetAllOrdersByCustomerID(cId, username, password);
         }
         
-        public System.Threading.Tasks.Task<WebshopClientConsole.webshopService.Order[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password) {
+        public System.Threading.Tasks.Task<int[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password) {
             return base.Channel.GetAllOrdersByCustomerIDAsync(cId, username, password);
         }
         

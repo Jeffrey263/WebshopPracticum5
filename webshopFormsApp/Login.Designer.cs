@@ -54,12 +54,15 @@
             // 
             // registerBtn
             // 
+            this.registerBtn.AutoSize = true;
             this.registerBtn.Location = new System.Drawing.Point(31, 188);
+            this.registerBtn.MaximumSize = new System.Drawing.Size(300, 0);
             this.registerBtn.Name = "registerBtn";
-            this.registerBtn.Size = new System.Drawing.Size(107, 37);
+            this.registerBtn.Size = new System.Drawing.Size(66, 27);
             this.registerBtn.TabIndex = 2;
             this.registerBtn.Text = "register";
             this.registerBtn.UseVisualStyleBackColor = true;
+            this.registerBtn.Click += new System.EventHandler(this.registerBtn_Click);
             // 
             // loginBtn
             // 
@@ -93,6 +96,7 @@
             // 
             this.alert.AutoSize = true;
             this.alert.Location = new System.Drawing.Point(28, 249);
+            this.alert.MaximumSize = new System.Drawing.Size(300, 0);
             this.alert.Name = "alert";
             this.alert.Size = new System.Drawing.Size(117, 17);
             this.alert.TabIndex = 7;
@@ -102,7 +106,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 284);
+            this.ClientSize = new System.Drawing.Size(380, 304);
             this.Controls.Add(this.alert);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label2);

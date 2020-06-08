@@ -69,7 +69,7 @@ namespace Webshop
         {
             if (CheckUserAuthentication(username, password))
             {
-                Console.WriteLine("saving user: " + id);
+                Console.WriteLine("getting user: " + id);
                 return uDao.GetUserById(id);
             }
 
@@ -80,7 +80,7 @@ namespace Webshop
         {
             if (CheckUserAuthentication(username, password))
             {
-                Console.WriteLine("saving user: " + username);
+                Console.WriteLine("getting user: " + username);
                 return uDao.GetUserByName(username);
             }
 
@@ -94,7 +94,7 @@ namespace Webshop
         }
 
         //----------------| ALLE ORDER SERVICES |----------------------------------------------------
-        public List<Order> GetAllOrdersByCustomerID(Int32 cId, string username, string password)
+        public List<int> GetAllOrdersByCustomerID(Int32 cId, string username, string password)
         {
             if (CheckUserAuthentication(username, password))
             {
@@ -109,7 +109,7 @@ namespace Webshop
             if (CheckUserAuthentication(username, password))
             {
                 Console.WriteLine("Getting order: " + id);
-                return oDao.GetOrderByID(id);
+                return oDao.GetOrderByID(id); 
             }
             return null;
         }
@@ -121,6 +121,16 @@ namespace Webshop
                     Console.WriteLine("Saving order for user: " + u.name);
                     oDao.SaveNewOrder(u, producten);
                 }
+        }
+
+        public List<OrderProductDTO> GetProductsFromOrder(int orderID, string username, string password)
+        {
+            if (CheckUserAuthentication(username, password))
+            {
+                Console.WriteLine("Getting products for order: " + orderID);
+                return oDao.GetProductsFromOrder(orderID);
+            }
+            return null;
         }
 
         //----------------| AUTHENTICATIE |----------------------------------------------------

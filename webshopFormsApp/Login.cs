@@ -18,8 +18,8 @@ namespace webshopFormsApp
         {
             InitializeComponent();
             alert.Text = "";
-            userField.Text = "Jeff263";
-            passField.Text = "Fukm*GK8";
+            userField.Text = "Jeffrey263";
+            passField.Text = "wD$1wu1l";
         }
 
         private void loginBtn_Click(object sender, EventArgs e)
@@ -43,6 +43,15 @@ namespace webshopFormsApp
                 {
                     alert.Text = "service ofline";
                 }
+            }
+        }
+
+        private void registerBtn_Click(object sender, EventArgs e)
+        {
+            using (IwebshopServiceClient shopProxy = new IwebshopServiceClient())
+            {
+                string newUser = shopProxy.SaveNewUser(userField.Text);
+                alert.Text = newUser;
             }
         }
     }

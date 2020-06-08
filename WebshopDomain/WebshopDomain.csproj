@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="OrderDAO.cs" />
+    <Compile Include="OrderProductDTO.cs" />
     <Compile Include="UserDAO.cs" />
     <Compile Include="ProductDAO.cs" />
     <Compile Include="Model1.Context.cs">

@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="71039911-6af3-41ce-a466-56e583c72ad7" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?xsd=xsd1" />
+    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="81c64570-a021-433a-b8dd-86715cbec16d" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?disco" />
+    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="40739f28-25c5-465c-85b8-daeef2d5bbd8" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?xsd=xsd0" />
     <MetadataFile FileName="webshopService.wsdl" MetadataType="Wsdl" ID="a349dea7-3f22-43fd-b0ac-32c42b9d2ad7" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?wsdl" />
     <MetadataFile FileName="item1.xsd" MetadataType="Schema" ID="3f0ff2bd-5c50-45ba-8131-5f3d9cd5b96a" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?xsd=xsd2" />
-    <MetadataFile FileName="item2.xsd" MetadataType="Schema" ID="40739f28-25c5-465c-85b8-daeef2d5bbd8" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?xsd=xsd0" />
-    <MetadataFile FileName="item.disco" MetadataType="Disco" ID="81c64570-a021-433a-b8dd-86715cbec16d" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?disco" />
+    <MetadataFile FileName="item.xsd" MetadataType="Schema" ID="71039911-6af3-41ce-a466-56e583c72ad7" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?xsd=xsd1" />
+    <MetadataFile FileName="item3.xsd" MetadataType="Schema" ID="63daecd9-bbb5-463d-ad70-aa3ef351af2c" SourceId="1" SourceUrl="http://localhost:8080/Design_Time_Addresses/Webshop/webshopService/?xsd=xsd3" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

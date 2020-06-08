@@ -40,13 +40,16 @@ namespace Webshop
 
         //----------------| ALLE ORDER SERVICES |----------------------------------------------------
         [OperationContract]
-        List<Order> GetAllOrdersByCustomerID(Int32 cId, string username, string password);
+        List<int> GetAllOrdersByCustomerID(Int32 cId, string username, string password);
 
         [OperationContract]
         Order GetOrderByID(Int32 id, string username, string password);
 
         [OperationContract]
         void SaveNewOrder(User u, List<Order_Product> producten, string username, string password);
+
+        [OperationContract]
+        List<OrderProductDTO> GetProductsFromOrder(int orderID, string username, string password);
 
     }
 }

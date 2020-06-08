@@ -369,6 +369,67 @@ namespace webshopFormsApp.ServiceReference1 {
         }
     }
     
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
+    [System.Runtime.Serialization.DataContractAttribute(Name="OrderProductDTO", Namespace="http://schemas.datacontract.org/2004/07/WebshopDomain")]
+    [System.SerializableAttribute()]
+    public partial class OrderProductDTO : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
+        
+        [System.NonSerializedAttribute()]
+        private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int productField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int quantityField;
+        
+        [global::System.ComponentModel.BrowsableAttribute(false)]
+        public System.Runtime.Serialization.ExtensionDataObject ExtensionData {
+            get {
+                return this.extensionDataField;
+            }
+            set {
+                this.extensionDataField = value;
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int product {
+            get {
+                return this.productField;
+            }
+            set {
+                if ((this.productField.Equals(value) != true)) {
+                    this.productField = value;
+                    this.RaisePropertyChanged("product");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int quantity {
+            get {
+                return this.quantityField;
+            }
+            set {
+                if ((this.quantityField.Equals(value) != true)) {
+                    this.quantityField = value;
+                    this.RaisePropertyChanged("quantity");
+                }
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IwebshopService")]
     public interface IwebshopService {
@@ -422,10 +483,10 @@ namespace webshopFormsApp.ServiceReference1 {
         System.Threading.Tasks.Task<bool> CheckUserAuthenticationAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerID", ReplyAction="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerIDResponse")]
-        webshopFormsApp.ServiceReference1.Order[] GetAllOrdersByCustomerID(int cId, string username, string password);
+        int[] GetAllOrdersByCustomerID(int cId, string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerID", ReplyAction="http://tempuri.org/IwebshopService/GetAllOrdersByCustomerIDResponse")]
-        System.Threading.Tasks.Task<webshopFormsApp.ServiceReference1.Order[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password);
+        System.Threading.Tasks.Task<int[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetOrderByID", ReplyAction="http://tempuri.org/IwebshopService/GetOrderByIDResponse")]
         webshopFormsApp.ServiceReference1.Order GetOrderByID(int id, string username, string password);
@@ -438,6 +499,12 @@ namespace webshopFormsApp.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/SaveNewOrder", ReplyAction="http://tempuri.org/IwebshopService/SaveNewOrderResponse")]
         System.Threading.Tasks.Task SaveNewOrderAsync(webshopFormsApp.ServiceReference1.User u, webshopFormsApp.ServiceReference1.Order_Product[] producten, string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetProductsFromOrder", ReplyAction="http://tempuri.org/IwebshopService/GetProductsFromOrderResponse")]
+        webshopFormsApp.ServiceReference1.OrderProductDTO[] GetProductsFromOrder(int orderID, string username, string password);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IwebshopService/GetProductsFromOrder", ReplyAction="http://tempuri.org/IwebshopService/GetProductsFromOrderResponse")]
+        System.Threading.Tasks.Task<webshopFormsApp.ServiceReference1.OrderProductDTO[]> GetProductsFromOrderAsync(int orderID, string username, string password);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -531,11 +598,11 @@ namespace webshopFormsApp.ServiceReference1 {
             return base.Channel.CheckUserAuthenticationAsync(username, password);
         }
         
-        public webshopFormsApp.ServiceReference1.Order[] GetAllOrdersByCustomerID(int cId, string username, string password) {
+        public int[] GetAllOrdersByCustomerID(int cId, string username, string password) {
             return base.Channel.GetAllOrdersByCustomerID(cId, username, password);
         }
         
-        public System.Threading.Tasks.Task<webshopFormsApp.ServiceReference1.Order[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password) {
+        public System.Threading.Tasks.Task<int[]> GetAllOrdersByCustomerIDAsync(int cId, string username, string password) {
             return base.Channel.GetAllOrdersByCustomerIDAsync(cId, username, password);
         }
         
@@ -553,6 +620,14 @@ namespace webshopFormsApp.ServiceReference1 {
         
         public System.Threading.Tasks.Task SaveNewOrderAsync(webshopFormsApp.ServiceReference1.User u, webshopFormsApp.ServiceReference1.Order_Product[] producten, string username, string password) {
             return base.Channel.SaveNewOrderAsync(u, producten, username, password);
+        }
+        
+        public webshopFormsApp.ServiceReference1.OrderProductDTO[] GetProductsFromOrder(int orderID, string username, string password) {
+            return base.Channel.GetProductsFromOrder(orderID, username, password);
+        }
+        
+        public System.Threading.Tasks.Task<webshopFormsApp.ServiceReference1.OrderProductDTO[]> GetProductsFromOrderAsync(int orderID, string username, string password) {
+            return base.Channel.GetProductsFromOrderAsync(orderID, username, password);
         }
     }
 }
